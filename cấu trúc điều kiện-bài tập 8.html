@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện-bài tập 8</title>
+</head>
+<body>
+<p><b>Bài 8 :</b>Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</p>
+<label for="tuoi">tuổi :</label>
+<input type="text" size="10px" id="tuoi">
+<input type="button" value="kiemTra" onclick="tuoiCua1Nguoi()">
+<p id="ketQua"><br></p>
+</body>
+<script>
+    function tuoiCua1Nguoi() {
+        let tuoi = document.getElementById("tuoi").value;
+        let res = document.getElementById("ketQua");
+        if (isNaN(tuoi)) {
+            res.innerHTML = "dữ liệu không hợp lệ vui lòng nhập số"
+        } else if ( tuoi >120 || tuoi<0) {
+            res.innerHTML = "không phải tuổi"
+        } else {
+            res.innerHTML = " là tuổi của 1 người:"
+        }
+    }
+</script>
+</html>

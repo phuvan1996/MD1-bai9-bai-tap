@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><b>Bài 1 :</b>Chuyển từ độ C sang độ F.</p>
+<label for="nhietDo">nhiệt độ :</label><input type="text" size="10px" id="nhietDo">
+<input type="button" value="kiemTra" onclick="TransCtoF()">
+<p id="ketQua">kết quả :</p>
+</body>
+  <script>
+    function TransCtoF() {
+    let c = document.getElementById("nhietDo").value;
+    let ketqua = document.getElementById("ketQua");
+    if (isNaN(c)) {
+    ketqua.innerHTML = `vui lòng nhập số.`
+  } else {
+    ketqua.innerHTML =  `ketQua : ${c * 9/5 + 32} °F`
+  }
+  }
+</script>
+</html>

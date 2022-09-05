@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện-bài tập 9</title>
+</head>
+<body>
+<p><b>Bài 9 :</b>Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</p>
+<label for="a">a :</label><input type="text" size="10px" id="a">
+<label for="b">b :</label><input type="text" size="10px" id="b">
+<label for="c">c :</label><input type="text" size="10px" id="c">
+<input type="button" value="kiemTra" onclick="CanhTamGiac()">
+<p id="ketQua"><br></p>
+</body>
+<script>
+  function CanhTamGiac() {
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    let res = document.getElementById("ketQua");
+    if (isNaN(a)||isNaN(b)||isNaN(c)) {
+      res.innerHTML = "Dữ liệu không hợp lệ"
+    } else if ( (a>0 && b>0 && c>0) && ((a + b > c) || (a + c > b) || (b + c > a)) ) {
+      res.innerHTML = "là các cạnh của một hình tam giác"
+    } else {
+      res.innerHTML = "không phải là các cạnh của một tam giác"
+    }
+  }
+</script>
+</html>

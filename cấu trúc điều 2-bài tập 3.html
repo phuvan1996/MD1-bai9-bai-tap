@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện 2-bài tập 3</title>
+</head>
+<body>
+<p><b>Bài 3 :</b>Tính diện tích hình vuông khi biết cạnh a.</p>
+<label for="S_HinhVuong">Meter :</label><input type="text" size="10px" id="S_HinhVuong">
+<input type="button" value="kiemTra" onclick="S_HinhVuong()">
+<p id="ketQua">kết Quả :</p>
+<script>
+  function S_HinhVuong() {
+    let a = document.getElementById("S_HinhVuong").value;
+    let ketqua = document.getElementById("ketQua");
+    if (isNaN(a)) {
+      ketqua.innerHTML = `Input must be a number.`
+    } else {
+      ketqua.innerHTML =  `ketQua : ${a*a} m²`
+    }
+  }
+</script>
+</body>
+</html>

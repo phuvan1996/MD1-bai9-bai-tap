@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện 2_bài tập 6</title>
+</head>
+<body>
+<p><b>Bài 6 :</b>Giải phương trình bậc 1 dạng ax + b = 0</p>
+<label for="a">a :</label><input type="text" size="10px" id="a">
+<label for="b">b :</label><input type="text" size="10px" id="b">
+<input type="button" value="kiemTra" onclick="phuongTrinhBac1()">
+<p id="ketQua"><br></p>
+</body>
+<script>
+  function phuongTrinhBac1() {
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let ketqua = document.getElementById("ketQua");
+    if (isNaN(a)||isNaN(b)) {
+      ketqua.innerHTML = `Dữ liệu không hợp lệ`;
+    }
+    else if (a == 0 && b == 0){
+      ketqua.innerHTML = `Phương trình vô số nghiệm`;
+    }
+    else if (a != 0 && b == 0){
+      ketqua.innerHTML = `Phương trình có nghiệm x = 0`;
+    }
+    else if (a == 0 && b != 0){
+      ketqua.innerHTML = `Phương trình vô nghiệm`;
+    }
+    else {
+      ketqua.innerHTML = `Phương trình có nghiệm x = ${-b/a}`;
+    }
+  }
+</script>
+</html>

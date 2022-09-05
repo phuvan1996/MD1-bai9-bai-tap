@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điê kiện 2-bài tập 4</title>
+</head>
+<body>
+<p><b>Bài 4 :</b>Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</p>
+<label for="Canh_a">a :</label><input type="text" size="10px" id="Canh_a">
+<label for="Canh_b">b :</label><input type="text" size="10px" id="Canh_b">
+<input type="button" value="kiemTra" onclick="dienTichHinhChuNhat()">
+<p id="ketQua">kết quả :</p>
+<script>
+  function dienTichHinhChuNhat() {
+    let canh_a = document.getElementById("Canh_a").value;
+    let canh_b = document.getElementById("Canh_b").value;
+    let ketqua = document.getElementById("ketQua");
+    if (isNaN(canh_a)||isNaN(canh_b)) {
+      ketqua.innerHTML = `Input must be a number.`
+    } else {
+      ketqua.innerHTML =  `ketQua : ${canh_a*canh_b} m²`
+    }
+  }
+</script>
+</body>
+</html>
